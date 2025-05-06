@@ -1,27 +1,30 @@
-import styles from "./Header.module.css";
 
 export default function Header() {
   return (
     <>
-      <div className="flex items-center justify-center w-full h-16 sticky top-0">
-        <div className="flex justify-between items-center w-1/2 h-full px-4 bg-black border-3 border-cyan-500">
-          <h1 className="text-3xl font-bold ">Reiss Oliveros</h1>
-          <a href="/resume" className={styles.link}>Resume</a>
-          <a href="/projects" className={styles.link}>Projects</a>
-          <a href="/contact" className="link">Contact</a>
+      <div className="flex justify-center items-center w-full h-16 mt-4 sticky top-0">
+        <div className="flex items-center justify-evenly bg-black border-2 border-green-600 w-6/10 h-full rounded-full">
+          <div className={linkStyles}>
+            <a href="/"><b>Home</b></a>
+          </div>
+          <div className={linkStyles}>
+            <a href="/resume"><b>Resume</b></a>
+          </div>
+          <div className={linkStyles}>
+            <a href="/projects"><b>Projects</b></a>
+          </div>
+          <div className={linkStyles}>
+            <a href="/contact"><b>Contact</b></a>
+          </div>
+          <div className={linkStyles}>
+            <a href="/experience"><b>Experience</b></a>
+          </div>
         </div>
       </div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
-      <div className="w-full h-16 border-2 border-gray-600"></div>
     </>
   );
 }
+
+const linkStyles = `
+  flex justify-center items-center w-25 h-4/5 text-white rounded-2xl bg-green-600 hover:bg-green-500 hover:text-black hover:animate-pulse
+`;
